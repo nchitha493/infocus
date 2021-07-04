@@ -1,0 +1,41 @@
+
+    <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form  [formGroup]="SignupForm" (ngSubmit)="onSubmit()" class="form">
+                            <h3 class="text-center text-info">Register</h3>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Name:</label><br>
+                                <input type="text" formControlName = "name"  class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Age:</label><br>
+                                <input type="number"  min="1" max="100" formControlName = "age"  class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="username" class="text-info">Email:</label><br>
+                                <input type="text" formControlName = "email"  class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="text-info">Enter Password:</label><br>
+                                <input type="text" formControlName = "password"  class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"  class="text-info">Re Enter Password:</label><br>
+                                <input type="text"  formControlName = "repassword"  class="form-control">
+                            </div>
+                            <div class="form-group"><br>
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
+                            </div>
+                            <div id="register-link" class="text-right">
+                                <a routerLink="/" class="text-info">Login here</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-toaster-container></app-toaster-container>
